@@ -211,5 +211,13 @@ class PhpUnderControl_Example_Math
 
         return $v8;
     }
-nothing
+$whitelist = array(
+  "https://www.sonarsource.com/"
+);
+$url = $this->request->getQuery("url");
+if (in_array($url, $whitelist)) {
+  return $this->redirect($url);
+} else {
+  throw new ForbiddenException();
+}
 }
