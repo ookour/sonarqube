@@ -211,4 +211,5 @@ class PhpUnderControl_Example_Math
 
         return $v8;
     }
+nothing
 }
